@@ -1,0 +1,9 @@
+# Ignora archivos del sistema Mac 
+.DS_store
+
+# Ignorar los main
+prueba.c
+
+# Ignorar los .o y .out
+*.o
+*.out
