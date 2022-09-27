@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:24:34 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/21 19:44:29 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/09/23 13:10:54 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/09/23 13:11:03 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
 
-void	*ft_memset(void	*b, int c, size_t len)
+void	ft_bzero(void	*s, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < len)
+	while (i < n)
 	{
-		((unsigned char *)b)[i] = c;
+		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
-	return (b);
 }

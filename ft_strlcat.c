@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:24:34 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/21 19:44:29 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/07/24 12:38:32 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/07/26 11:59:52 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stddef.h>
 
-void	*ft_memset(void	*b, int c, size_t len)
+size_t	ft_strlen(const char *s);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	lg;
 	size_t	i;
+	size_t	lg_src;
 
 	i = 0;
-	while (i < len)
+	lg = ft_strlen(dst);
+	lg_src = ft_strlen(src);
+	if (dstsize <= lg)
+		return (dstsize + lg_src);
+	while (src[i] != '\0' && i < dstsize - lg - 1)
 	{
-		((unsigned char *)b)[i] = c;
+		dst[lg + i] = src[i];
 		i++;
 	}
-	return (b);
+	dst[lg + i] = '\0';
+	return (lg + lg_src);
 }
