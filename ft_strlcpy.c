@@ -3,30 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ctrivino <ctrivino@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:09:32 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/21 16:49:30 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/09/27 19:01:07 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
+
+#include <stdio.h>
 
 size_t	ft_strlen(const char *s);
 
-size_t	ft_strlcpy(char	*dst, const char	*src, unsigned int size)
+size_t	ft_strlcpy(char	*dst, const char	*src, size_t dstsize)
 {
-	unsigned long	i;
-	size_t			len_src;
-	size_t			len_dst;
+	size_t	i;
+	size_t	len_src;
 
 	i = 0;
 	len_src = ft_strlen(src);
-	len_dst = ft_strlen(dst);
-	if (dst == NULL || src == NULL)
-		return (0);
-	if (len_dst > 0 && size > 0)
+	if (dstsize != 0)
 	{
-		while (i < (size - 1) && src[i] != '\0')
+		while (i < (dstsize-1) && src[i] != '\0')
 		{
 			dst[i] = src[i];
 			i++;
