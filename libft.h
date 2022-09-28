@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ctrivino <ctrivino@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:24:35 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/22 13:50:59 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/09/28 12:31:24 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ void	*ft_memmove(void	*dst, const void	*src, size_t	len);
 unsigned int    ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
