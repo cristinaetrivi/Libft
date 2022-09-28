@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr_v1.c                                    :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 12:11:10 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/28 15:24:39 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/09/28 16:26:12 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/09/28 19:27:02 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-size_t	ft_strlen(const char *s);
-
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char			*pt;
-	char			cst;
-    unsigned int	s_len;
+	size_t	i;
 
-	pt = (char *)s;
-	cst = (char )c;
-    s_len = (unsigned int )(ft_strlen(s));
-	while (*pt)
+	i = 0;
+	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
 	{
-        pt++;
+		if (s1[i] != s2[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		i++;
 	}
-	while (*pt != cst)
-	{
-        pt--;
-	}
-	if (*pt == cst)
-		return (pt);
-	else
-		return (0);
+	return (0);
 }

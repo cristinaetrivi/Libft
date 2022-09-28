@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 12:11:10 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/28 13:01:09 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/09/28 16:07:07 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,12 @@ char	*ft_strrchr(const char *s, int c)
 	{
         pt++;
 	}
-	if (*pt == cst)
-		return (pt);
-	while (*pt)
+	while (*pt != cst && (*pt != *s))
 	{
-		if (*pt == cst)
-			return (pt);
-        pt--;
+		pt--;
 	}
 	if (*pt == cst)
-		return (pt);
+			return (pt);
 	else
 		return (0);
 }
