@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 16:09:32 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/30 17:51:05 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/10/03 12:47:22 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/10/03 18:52:14 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_memmove(void	*dst, const void	*src, size_t	len)
+size_t	ft_strlen(const char *s);
+
+char	*ft_strdup(const char *s)
 {
+	char	*strcp;
+	size_t	lg;
 	size_t	i;
 
 	i = 0;
-	if (dst == NULL && src == NULL && len)
+	lg = ft_strlen(s);
+	strcp = malloc((lg * sizeof(*strcp)) + sizeof(*strcp));
+	if (!(strcp))
+	{
 		return (NULL);
-	if (dst > src)
-	{
-		while (i < len)
-		{
-			((char *)dst)[len - 1 - i] = ((char *)src)[len - i - 1];
-			i++;
-		}
 	}
-	else
+	while (i < lg)
 	{
-		while (i < len)
-		{
-			((char *)dst)[i] = ((char *)src)[i];
-			i++;
-		}
+		strcp[i] = s[i];
+		i++;
 	}
-	return (dst);
+	strcp[lg] = '\0';
+	return (strcp);
 }
