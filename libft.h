@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:24:35 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/03 19:03:09 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/04 13:21:13 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ char			*ft_strnstr(const char *haystack, \
 int				ft_atoi(const char *s);
 char			*ft_strdup(const char *s);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
 
 #endif
