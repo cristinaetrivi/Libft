@@ -6,11 +6,37 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:22:04 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/04 13:37:11 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/04 15:37:30 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+
+size_t	ft_strlen(const char *s);
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	size_t	i;
+	size_t	len;
+	char	*str;
 	
+	i = 0;
+	len = (ft_strlen(s1) + ft_strlen(s2) + 1);
+	str = malloc(len * sizeof(*str));
+	if (!(str) || ((!(s1)) && (!(s2))))
+		return (NULL);
+	while (*s1)
+	{
+		str[i] = *s1;
+		s1++;
+		i++;
+	}
+	while (*s2)
+	{
+		str[i] = *s2;
+		i++;
+		s2++;
+	}
+	str[i] = '\0';
+	return (str);
 }
