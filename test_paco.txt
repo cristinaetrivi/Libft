@@ -1,0 +1,1110 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║             libft            ║
+                        ╚══════════════════════════════╝
+
+// char	*ft_strtrim(char const *s1, char const *set)
+// {
+// 	int	i;
+// 	char	*start;
+// 	char	*end;
+// 	size_t	flags;
+// 	size_t	flage;
+		
+// 	i = 0;
+// 	flags = 0;
+// 	flage = 0;
+// 	while (*set)
+// 	{
+// 		while(flags == 0 && flage == 0)
+// 		{
+// 			if(ft_strchr(s1, *set) != 0)
+// 				flags = 1;
+// 			start = ft_strchr(s1, *set);
+// 			end = ft_strrchr(s1, *set);
+// 		}
+// 		set++;
+// 	}
+// 	return (s1);
+// }
+
+⠋ Preparing framework
+
+⠙ Preparing framework
+
+⠹ Preparing framework
+
+⠸ Preparing framework
+
+⠼ Preparing framework
+
+⠴ Preparing framework
+
+⠦ Preparing framework
+
+⠧ Preparing framework
+
+⠇ Preparing framework
+
+⠏ Preparing framework
+
+⠋ Preparing framework
+
+⠙ Preparing framework
+
+⠹ Preparing framework
+
+⠸ Preparing framework
+
+⠼ Preparing framework
+
+⠴ Preparing framework
+
+⠦ Preparing framework
+
+⠧ Preparing framework
+
+⠇ Preparing framework
+
+⠏ Preparing framework
+
+⠋ Preparing framework
+
+⠙ Preparing framework
+
+⠹ Preparing framework
+
+⠸ Preparing framework
+
+⠼ Preparing framework
+
+⠴ Preparing framework
+
+⠦ Preparing framework
+
+⠧ Preparing framework
+✔ Preparing framework
+
+
+
+⠋ Executing: make fclean all (no bonus)
+
+⠙ Executing: make fclean all (no bonus)
+
+⠹ Executing: make fclean all (no bonus)
+
+⠸ Executing: make fclean all (no bonus)
+
+⠼ Executing: make fclean all (no bonus)
+
+⠴ Executing: make fclean all (no bonus)
+
+⠦ Executing: make fclean all (no bonus)
+
+⠧ Executing: make fclean all (no bonus)
+
+⠇ Executing: make fclean all (no bonus)
+
+⠏ Executing: make fclean all (no bonus)
+✖ Executing: make fclean all (no bonus)
+ft_strtrim.c:22:2: error: expected statement
+        }
+        ^
+1 error generated.
+make: *** [ft_strtrim.o] Error 1
+
+
+Problem creating the library
+
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║             libft            ║
+                        ╚══════════════════════════════╝
+
+
+⠋ Preparing framework
+
+⠙ Preparing framework
+
+⠹ Preparing framework
+
+⠸ Preparing framework
+
+⠼ Preparing framework
+
+⠴ Preparing framework
+
+⠦ Preparing framework
+
+⠧ Preparing framework
+
+⠇ Preparing framework
+
+⠏ Preparing framework
+
+⠋ Preparing framework
+
+⠙ Preparing framework
+
+⠹ Preparing framework
+
+⠸ Preparing framework
+
+⠼ Preparing framework
+✔ Preparing framework
+
+
+
+⠋ Executing: make fclean all (no bonus)
+
+⠙ Executing: make fclean all (no bonus)
+
+⠹ Executing: make fclean all (no bonus)
+
+⠸ Executing: make fclean all (no bonus)
+
+⠼ Executing: make fclean all (no bonus)
+
+⠴ Executing: make fclean all (no bonus)
+
+⠦ Executing: make fclean all (no bonus)
+
+⠧ Executing: make fclean all (no bonus)
+
+⠇ Executing: make fclean all (no bonus)
+
+⠏ Executing: make fclean all (no bonus)
+✔ Executing: make fclean all (no bonus)
+
+
+ℹ Executing: libft-war-machine (https://github.com/y3ll0w42/libft-war-machine)
+
+[1m[34mFUNCTION[18GTESTS[39GRESULT
+[0m[36mft_strtrim[18G[31mT[0m[31mT[0m[31mT[0m[31mT[0m[31mT[0m[39G[31mKO
+[0m
+Abort : A Bus error : B Segmentation fault : S Timeout : T
+
+More information in: /Users/ctrivino/francinette/temp/libft/war-machine/deepthought
+
+Errors in strtrim: /Users/ctrivino/francinette/temp/libft/war-machine/tests/Part2_functions/ft_strtrim
+Test 1:
+    char s1[] = "lorem \n ipsum \t dolor \n sit \t amet";
+    if (!(strtrim = ft_strtrim(s1, " ")))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strtrim);
+    if (strtrim == s1)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test01.output):
+lorem $
+ ipsum 	 dolor $
+ sit 	 amet
+Your result (cat -e user_output_test01):
+
+Test 2:
+    char s1[] = "lorem ipsum dolor sit etam";
+    if (!(strtrim = ft_strtrim(s1, "te")))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strtrim);
+    if (strtrim == s1)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test02.output):
+lorem ipsum dolor sit am
+Your result (cat -e user_output_test02):
+
+Test 3:
+    char s1[] = " lorem ipsum dolor sit amet";
+    if (!(strtrim = ft_strtrim(s1, "l ")))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strtrim);
+    if (strtrim == s1)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test03.output):
+orem ipsum dolor sit amet
+Your result (cat -e user_output_test03):
+
+Test 4:
+    char s1[] = "lorem ipsum dolor sit amet";
+    if (!(strtrim = ft_strtrim(s1, "tel")))
+        ft_print_result("NULL");
+    else
+        ft_print_result(strtrim);
+    if (strtrim == s1)
+        ft_print_result("\nA new string was not returned");
+Expected (cat -e test04.output):
+orem ipsum dolor sit am
+Your result (cat -e user_output_test04):
+...
+
+File too large. To see full report open: /Users/ctrivino/francinette/temp/libft/war-machine/errors.log
+
+
+
+⠋ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠙ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠹ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠸ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠼ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠴ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠦ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠧ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠇ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠏ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠋ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠙ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠹ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠸ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠼ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠴ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠦ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠧ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠇ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠏ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠋ Compiling tests: libftTester (https://github.com/Tripo (...)
+
+⠙ Compiling tests: libftTester (https://github.com/Tripo (...)
+✔ Compiling tests: libftTester (https://github.com/Tripouille/libftTester)
+
+
+ℹ Testing:
+
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+ft_strtrim	: 1.TIMEOUT
+
+
+Errors in:
+
+For /Users/ctrivino/francinette/tests/libft/Tripouille/tests/ft_strtrim_test.cpp:
+TIMEOUT 19: 	/* 1 */ check(!strcmp(s, "tripouille"));
+
+
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠇ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠏ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠋ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠙ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠹ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠸ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠼ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠴ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠦ Compiling tests: libft-unit-test (https://github.com/a (...)
+
+⠧ Compiling tests: libft-unit-test (https://github.com/a (...)
+✔ Compiling tests: libft-unit-test (https://github.com/alelievr/libft-unit-test)
+
+
+ℹ Testing:
+ft_strtrim      : [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] [TIMEOUT] 
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+[timeout]: see the log file for informations
+	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ";
+ 	char *s2 = "Hello \t  Please\n Trim me !";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ Test code:
+ 	char *s1 = "   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !";
+ 	char *s2 = "Hello \t  Please\n Trim me !";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ Test code:
+ 	char *s1 = "Hello \t  Please\n Trim me !";
+ 	char *s2 = "Hello \t  Please\n Trim me !";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ Test code:
+ 	char *s1 = "  \t \t \n   \n\n\n\t";
+ 	char *s2 = "";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ Test code:
+ 	char *s1 = "";
+ 	char *s2 = "";
+ 	char *ret = ft_strtrim(s1, " \n\t");
+ 
+ 	if (!strcmp(ret, s2))
+ 		exit(TEST_SUCCESS);
+ 	exit(TEST_FAILED);
+ 
+ Test code:
+ 	char *s1 = "\t   \n\n\n  \n\n\t    Hello \t  Please\n Trim me !\t\t\t\n  \t\t\t\t  ";
+ 	char *s2 = "Hello \t  Please\n Trim me !";
+ 	int r_size = strlen(s2);
+ 	int size;
+ 
+...
+
+File too large. To see full report open: /Users/ctrivino/francinette/temp/libft/alelievr/result.log
+
+
+
+⠋ Compiling tests: fsoares (my own)
+
+⠙ Compiling tests: fsoares (my own)
+
+⠹ Compiling tests: fsoares (my own)
+
+⠸ Compiling tests: fsoares (my own)
+
+⠼ Compiling tests: fsoares (my own)
+
+⠴ Compiling tests: fsoares (my own)
+
+⠦ Compiling tests: fsoares (my own)
+
+⠧ Compiling tests: fsoares (my own)
+
+⠇ Compiling tests: fsoares (my own)
+
+⠏ Compiling tests: fsoares (my own)
+
+⠋ Compiling tests: fsoares (my own)
+
+⠙ Compiling tests: fsoares (my own)
+
+⠹ Compiling tests: fsoares (my own)
+
+⠸ Compiling tests: fsoares (my own)
+
+⠼ Compiling tests: fsoares (my own)
+
+⠴ Compiling tests: fsoares (my own)
+
+⠦ Compiling tests: fsoares (my own)
+
+⠧ Compiling tests: fsoares (my own)
+
+⠇ Compiling tests: fsoares (my own)
+
+⠏ Compiling tests: fsoares (my own)
+
+⠋ Compiling tests: fsoares (my own)
+
+⠙ Compiling tests: fsoares (my own)
+
+⠹ Compiling tests: fsoares (my own)
+
+⠸ Compiling tests: fsoares (my own)
+
+⠼ Compiling tests: fsoares (my own)
+
+⠴ Compiling tests: fsoares (my own)
+
+⠦ Compiling tests: fsoares (my own)
+
+⠧ Compiling tests: fsoares (my own)
+
+⠇ Compiling tests: fsoares (my own)
+✔ Compiling tests: fsoares (my own)
+
+
+ℹ Testing:
+
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+
+ft_strtrim      : ⠼
+
+ft_strtrim      : ⠴
+
+ft_strtrim      : ⠦
+
+ft_strtrim      : ⠧
+
+ft_strtrim      : ⠇
+
+ft_strtrim      : ⠏
+
+ft_strtrim      : ⠋
+
+ft_strtrim      : ⠙
+
+ft_strtrim      : ⠹
+
+ft_strtrim      : ⠸
+ft_strtrim      : 1.KO Timeout
+
+
+
+⠋ Processing output
+
+⠙ Processing output
+Errors found:
+For ft_strtrim, in /Users/ctrivino/francinette/tests/libft/fsoares/test_strtrim.c:
+
+Error in test 1: ft_strtrim("", ""): Timeout occurred. You can increase the timeout by executing francinette --timeout <number of seconds>
+
+
+
+
+
+
+
+
+
+
+
+
+
