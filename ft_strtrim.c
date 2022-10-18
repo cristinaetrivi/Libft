@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:43:48 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/06 18:56:06 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:12:57 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_char_in_set(char c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		//In this case we chcek that the character of strim 
+		//In this case we check that the character of strim 
 		if (set[i] == c)
 			return (1);
 		i++;

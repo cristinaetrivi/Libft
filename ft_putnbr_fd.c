@@ -1,47 +1,55 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 19:26:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 16:09:50 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/10/18 17:13:26 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/10/18 17:44:31 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*static int	ft_nb_ele(char const *s, char c)
+int	ft_nbr(int n)
 {
 	int	i;
-	
-	i = 0;
-	while (*s)
+
+	i = 2;
+	if (n < 0)
+		i = 3;
+	while (n / 10 != 0)
 	{
-		if (*s == c)
-			i++;
-		s++;
+		if (n / 10 == 0)
+			break ;
+		i++;
+		n = n / 10;
 	}
 	return (i);
 }
 
-char	**ft_split(char const *s, char c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int		i;
-	char	*s_aux;
-	char	**str;
+	char	str[12];
+	int		a;
+	long	nbr;
 
-	i = 0;
-	s_aux = (char *)s;
-	*str = malloc((ft_nb_ele(s_aux)) * sizeof(int));
-	if (!*str)
-		return (NULL);
-	while (*s_aux)
+	nbr = n;
+	if (nbr == 0)
+		str[0] = '0';
+	if (n < 0)
 	{
-		str[i] = ft_strchr(s_aux, c);
-		s_aux++;
-		i++;
+		str[0] = '-';
+		nbr = nbr * -1;
 	}
-	return (str);
-}*/
+
+	a = ft_nbr(n) - 1;
+	while (nbr > 0)
+	{
+		a--;
+		str[a] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+	}
+	str[ft_nbr(n) - 1] = '\0';
+	write(fd, str, ft_strlen(str));
+}

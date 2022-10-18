@@ -1,47 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 19:26:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 16:09:50 by ctrivino         ###   ########.fr       */
+/*   Created: 2022/10/18 16:13:23 by ctrivino          #+#    #+#             */
+/*   Updated: 2022/10/18 16:55:41 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*static int	ft_nb_ele(char const *s, char c)
-{
-	int	i;
-	
-	i = 0;
-	while (*s)
-	{
-		if (*s == c)
-			i++;
-		s++;
-	}
-	return (i);
+void ft_putchar_fd(char c, int fd){
+    write(fd, &c, 1);
 }
-
-char	**ft_split(char const *s, char c)
-{
-	int		i;
-	char	*s_aux;
-	char	**str;
-
-	i = 0;
-	s_aux = (char *)s;
-	*str = malloc((ft_nb_ele(s_aux)) * sizeof(int));
-	if (!*str)
-		return (NULL);
-	while (*s_aux)
-	{
-		str[i] = ft_strchr(s_aux, c);
-		s_aux++;
-		i++;
-	}
-	return (str);
-}*/
