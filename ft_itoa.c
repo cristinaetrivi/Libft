@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:25:12 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/07 16:32:23 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/18 12:37:05 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 int	ft_nbr(int n)
 {
-	int i = 1;
+	int	i;
 
+	i = 2;
+	if (n < 0)
+		i = 3;
 	while (n / 10 != 0)
 	{
 		if (n / 10 == 0)
@@ -29,31 +32,27 @@ int	ft_nbr(int n)
 char	*ft_itoa(int n)
 {
 	char	*str;
-	int		lg;
 	int		a;
+	long	nbr;
 
-	lg = ft_nbr(n);
-	
+	nbr = n;
+	str = malloc((ft_nbr(n)) * sizeof(*str));
+	if (!str)
+		return NULL;
+	if (nbr == 0)
+		str[0] = '0';
 	if (n < 0)
 	{
-		lg = lg + 1;
-		str = malloc((lg + 1) * sizeof(*str));
 		str[0] = '-';
-		n = n * -1;
+		nbr = nbr * -1;
 	}
-	if (n > 0)
-		str = malloc((lg + 1) * sizeof(*str));
-	/*else
-		return (NULL);*/
-	a = lg;
-	while (a > 0)
+	a = ft_nbr(n) - 1;
+	while (nbr > 0)
 	{
 		a--;
-		if (a == 0 && str[a] == '-')
-          break ;
-		str[a] = (n % 10) + '0';
-		n = n / 10;
+		str[a] = (nbr % 10) + '0';
+		nbr = nbr / 10;
 	}
-	str[lg + 1] = '\0';
+	str[ft_nbr(n) - 1] = '\0';
 	return (str);
 }
