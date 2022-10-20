@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:26:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/20 16:20:23 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:24:33 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,13 @@ static int	ft_nb_ele(char const *s, char c)
 	y = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i - 1] != c)
-			y++;
+		if (s[i] != c)
+		{
+			if (i == 0 || s[i - 1] == c)
+				y++;
+		}
 		i++;
 	}
-	if ((s[i - 1]) && (s[i - 1] != c))
-		y += 1;
 	return (y);
 }
 
@@ -39,42 +40,44 @@ static void	ft_put_strs(char const *s, char c, char **words)
 	start = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i - 1] != c)
+		if (s[i] != c)
 		{
-			if (i - start != 0)
-			{
-				*words = ft_substr(s, start, i - start);
-				words++;
-			}
-			start = i + 1;
+			if (i == 0 || s[i - 1] == c)
+				start = i;
 		}
-		else if (s[i] == c)
-			start++;
+		if (i != 0 && s[i] == c && s[i - 1] != c)
+		{
+			*words = ft_substr(s, start, i - start);
+			words++;
+		}
 		i++;
 	}
-	if (s[i - 1] != c)
+	if (i > 0 && s[i - 1] != c)
+	{
 		*words = ft_substr(s, start, i - start);
-	if ((s[i - 1]) && s[i - 1] != c) 
 		words++;
-	*words  = NULL;	
+	}
+	*words = NULL; 
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
+	int		a;
 
-	if (s[0] == '\0')
+	a = ft_nb_ele(s, c);
+	/*if (s && s[0] == '\0')
 	{
 		words = (char **)malloc(sizeof(char *) + 1);
 		words[0] = NULL;
 		return (words);
-	}
-	words = (char **)malloc((ft_nb_ele(s, c) + 1)* sizeof(char *));
-	if (ft_nb_ele(s, c) == 2)
-	{
-		free(words);
-		words = (char **)malloc(ft_nb_ele(s, c)* sizeof(char *));
-	}
+	}*/ 
+	words = (char **)malloc((a + 1)* sizeof(char *));
+	// if (ft_nb_ele(s, c) == 2)
+	// {
+	// 	free(words);
+	// 	words = (char **)malloc(a * sizeof(char *));
+	// }
 	if (!words)
 	{
 		return (NULL);
