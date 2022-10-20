@@ -6,42 +6,79 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:26:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 16:09:50 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/20 16:20:23 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*static int	ft_nb_ele(char const *s, char c)
+static int	ft_nb_ele(char const *s, char c)
 {
 	int	i;
-	
+	int	y;
+
 	i = 0;
-	while (*s)
+	y = 0;
+	while (s[i])
 	{
-		if (*s == c)
-			i++;
-		s++;
+		if (s[i] == c && s[i - 1] != c)
+			y++;
+		i++;
 	}
-	return (i);
+	if ((s[i - 1]) && (s[i - 1] != c))
+		y += 1;
+	return (y);
+}
+
+static void	ft_put_strs(char const *s, char c, char **words)
+{
+	int	i;
+	int	start;
+
+	i = 0;
+	start = 0;
+	while (s[i])
+	{
+		if (s[i] == c && s[i - 1] != c)
+		{
+			if (i - start != 0)
+			{
+				*words = ft_substr(s, start, i - start);
+				words++;
+			}
+			start = i + 1;
+		}
+		else if (s[i] == c)
+			start++;
+		i++;
+	}
+	if (s[i - 1] != c)
+		*words = ft_substr(s, start, i - start);
+	if ((s[i - 1]) && s[i - 1] != c) 
+		words++;
+	*words  = NULL;	
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	char	*s_aux;
-	char	**str;
+	char	**words;
 
-	i = 0;
-	s_aux = (char *)s;
-	*str = malloc((ft_nb_ele(s_aux)) * sizeof(int));
-	if (!*str)
-		return (NULL);
-	while (*s_aux)
+	if (s[0] == '\0')
 	{
-		str[i] = ft_strchr(s_aux, c);
-		s_aux++;
-		i++;
+		words = (char **)malloc(sizeof(char *) + 1);
+		words[0] = NULL;
+		return (words);
 	}
-	return (str);
-}*/
+	words = (char **)malloc((ft_nb_ele(s, c) + 1)* sizeof(char *));
+	if (ft_nb_ele(s, c) == 2)
+	{
+		free(words);
+		words = (char **)malloc(ft_nb_ele(s, c)* sizeof(char *));
+	}
+	if (!words)
+	{
+		return (NULL);
+	}
+	ft_put_strs(s, c, words);
+	return (words);
+}
