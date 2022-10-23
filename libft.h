@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 20:24:35 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/23 12:36:14 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/23 20:31:46 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,9 @@ typedef struct	s_list
 	struct s_list *next;
 } t_list;
 t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+int				ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif

@@ -3,6 +3,8 @@
 
 # Ignorar los main
 prueba.c
+main.c
+
 
 # Ignorar los .o y .out
 *.o
