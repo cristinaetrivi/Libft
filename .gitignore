@@ -9,3 +9,5 @@ main.c
 # Ignorar los .o y .out
 *.o
 *.out
+*.a
+*.gch
