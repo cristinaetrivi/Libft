@@ -6,27 +6,21 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 12:11:10 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/29 11:55:05 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:36:15 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char			*pt;
-	char			cst;
+	size_t	i;
 
-	pt = (char *)s;
-	cst = (char )c;
-	while (*pt)
-	{
-		pt++;
-	}
-	while (*pt != cst && (*pt != *s))
-	{
-		pt--;
-	}
-	if (*pt == cst)
-		return (pt);
+	i = ft_strlen(s);
+	while (i > 0 && *(s + i) != (char )c)
+		i--;
+	if (*(s + i) == (char )c)
+		return ((char *)(s + i));
 	else
 		return (0);
 }

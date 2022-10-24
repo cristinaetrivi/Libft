@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 15:43:48 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 15:12:57 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:36:53 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static int	ft_char_in_set(char c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		//In this case we check that the character of strim 
 		if (set[i] == c)
 			return (1);
 		i++;
@@ -40,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1);
 	while (end > start && ft_char_in_set(s1[end - 1], set))
 		end--;
-	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
+	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;

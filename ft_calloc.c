@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:15:43 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/06 16:30:47 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 13:13:40 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	*ft_calloc(size_t count, size_t size)
 	pt = malloc(count * size);
 	if (!pt)
 		return (pt);
-	ft_bzero(pt, count*size);
+	ft_bzero(pt, count * size);
 	return (pt);
 }

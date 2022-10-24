@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:07:42 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/29 13:52:05 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:22:57 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {
 	size_t		i;
 	size_t		y;
-	size_t	count;
+	size_t		count;
 
 	i = 0;
 	if (((char *)neddle)[i] == '\0')

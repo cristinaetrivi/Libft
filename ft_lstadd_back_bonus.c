@@ -6,13 +6,13 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 20:22:02 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/23 20:46:04 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:41:06 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (!(*lst))
 		*lst = new;

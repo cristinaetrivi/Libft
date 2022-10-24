@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:46:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/23 20:15:11 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:42:08 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*p;
-	int				i;
-	
+	int		i;
+
 	i = 0;
 	p = lst;
 	while (p)

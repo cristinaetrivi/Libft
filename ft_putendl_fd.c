@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:04:50 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 17:11:27 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:43:41 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	char c;
+	char	c;
 
 	c = '\n';
 	write(fd, s, ft_strlen(s));

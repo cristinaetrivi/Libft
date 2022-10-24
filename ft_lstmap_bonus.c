@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:36:51 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 13:04:22 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:50:14 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,15 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*lst_result;
 	t_list	*aux;
 
-	if (!lst || !f || !(lst_result = ft_lstnew(f(lst->content))))
+	if (!lst || !f)
 		return (0);
+	lst_result = ft_lstnew(f(lst->content));
 	aux = lst_result;
 	lst = lst -> next;
 	while (lst)
 	{
-		if (!(aux->next = ft_lstnew(f(lst->content))))
+		aux->next = ft_lstnew(f(lst->content));
+		if (!(aux -> next))
 		{
 			ft_lstclear(&lst_result, del);
 			return (0);

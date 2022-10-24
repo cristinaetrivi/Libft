@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:25:12 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 12:37:05 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 13:12:47 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_itoa(int n)
 	nbr = n;
 	str = malloc((ft_nbr(n)) * sizeof(*str));
 	if (!str)
-		return NULL;
+		return (NULL);
 	if (nbr == 0)
 		str[0] = '0';
 	if (n < 0)

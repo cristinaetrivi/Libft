@@ -6,11 +6,12 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:13:26 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/18 17:44:31 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:19:15 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_nbr(int n)
 {
 	int	i;
@@ -42,7 +43,6 @@ void	ft_putnbr_fd(int n, int fd)
 		str[0] = '-';
 		nbr = nbr * -1;
 	}
-
 	a = ft_nbr(n) - 1;
 	while (nbr > 0)
 	{

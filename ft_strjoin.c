@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:22:04 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/04 15:37:30 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:21:24 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	size_t	len;
 	char	*str;
-	
+
 	i = 0;
 	len = (ft_strlen(s1) + ft_strlen(s2) + 1);
 	str = malloc(len * sizeof(*str));

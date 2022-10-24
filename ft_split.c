@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 19:26:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/20 18:24:33 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 15:38:47 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static void	ft_put_strs(char const *s, char c, char **words)
 		*words = ft_substr(s, start, i - start);
 		words++;
 	}
-	*words = NULL; 
+	*words = ((void *)0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -66,18 +66,7 @@ char	**ft_split(char const *s, char c)
 	int		a;
 
 	a = ft_nb_ele(s, c);
-	/*if (s && s[0] == '\0')
-	{
-		words = (char **)malloc(sizeof(char *) + 1);
-		words[0] = NULL;
-		return (words);
-	}*/ 
-	words = (char **)malloc((a + 1)* sizeof(char *));
-	// if (ft_nb_ele(s, c) == 2)
-	// {
-	// 	free(words);
-	// 	words = (char **)malloc(a * sizeof(char *));
-	// }
+	words = (char **)malloc((a + 1) * sizeof(char *));
 	if (!words)
 	{
 		return (NULL);

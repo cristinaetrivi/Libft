@@ -6,7 +6,7 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:56:31 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/04 14:01:07 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:39:48 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	lg = ft_strlen(s);
 	if ((lg - start) < len && (lg - start) > 0)
 		len = (lg - start);
-	if (lg < len )
+	if (lg < len)
 		len = lg;
 	strcp = malloc((len * sizeof(*strcp)) + sizeof(*strcp));
 	if (!(strcp))
