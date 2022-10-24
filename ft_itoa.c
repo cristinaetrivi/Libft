@@ -6,13 +6,13 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:25:12 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 18:22:18 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:32:19 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	sd_nbr(int n)
+static int	sd_nbr(int n)
 {
 	int	i;
 

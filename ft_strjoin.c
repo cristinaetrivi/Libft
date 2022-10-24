@@ -6,13 +6,11 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:22:04 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 15:21:24 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:35:05 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

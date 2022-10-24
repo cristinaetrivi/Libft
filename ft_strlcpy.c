@@ -6,13 +6,11 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:09:32 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/09/29 11:55:30 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:36:14 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcpy(char	*dst, const char	*src, size_t dstsize)
 {

@@ -6,13 +6,11 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:56:31 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 14:39:48 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:38:32 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

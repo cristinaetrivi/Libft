@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ctrivino <ctrivino@student.42malaga.com>   +#+  +:+       +#+        */
+/*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 12:38:32 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/07/26 11:59:52 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:35:52 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stddef.h>
 
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

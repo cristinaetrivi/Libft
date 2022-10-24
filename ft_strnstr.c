@@ -6,13 +6,11 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:07:42 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 15:22:57 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:38:05 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t	ft_strlen(const char	*s);
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *neddle, size_t len)
 {

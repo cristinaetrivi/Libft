@@ -6,12 +6,11 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 12:36:44 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 13:15:30 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:33:02 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstnew(void *content)
 {
