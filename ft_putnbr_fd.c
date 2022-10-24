@@ -6,13 +6,13 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:13:26 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 15:19:15 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:19:56 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbr(int n)
+int	s_nbr(int n)
 {
 	int	i;
 
@@ -43,13 +43,13 @@ void	ft_putnbr_fd(int n, int fd)
 		str[0] = '-';
 		nbr = nbr * -1;
 	}
-	a = ft_nbr(n) - 1;
+	a = s_nbr(n) - 1;
 	while (nbr > 0)
 	{
 		a--;
 		str[a] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
-	str[ft_nbr(n) - 1] = '\0';
+	str[s_nbr(n) - 1] = '\0';
 	write(fd, str, ft_strlen(str));
 }

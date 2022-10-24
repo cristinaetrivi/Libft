@@ -6,13 +6,13 @@
 /*   By: ctrivino <ctrivino@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:25:12 by ctrivino          #+#    #+#             */
-/*   Updated: 2022/10/24 13:12:47 by ctrivino         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:22:18 by ctrivino         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nbr(int n)
+int	sd_nbr(int n)
 {
 	int	i;
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	str = malloc((ft_nbr(n)) * sizeof(*str));
+	str = malloc((sd_nbr(n)) * sizeof(*str));
 	if (!str)
 		return (NULL);
 	if (nbr == 0)
@@ -46,13 +46,13 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 		nbr = nbr * -1;
 	}
-	a = ft_nbr(n) - 1;
+	a = sd_nbr(n) - 1;
 	while (nbr > 0)
 	{
 		a--;
 		str[a] = (nbr % 10) + '0';
 		nbr = nbr / 10;
 	}
-	str[ft_nbr(n) - 1] = '\0';
+	str[sd_nbr(n) - 1] = '\0';
 	return (str);
 }
